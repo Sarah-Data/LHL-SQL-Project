@@ -20,7 +20,8 @@ Answer:image.png
 **Question 2: What is the average number of products ordered from visitors in each city and country?**
 
 
-SQL Queries:```
+SQL Queries:
+```
 SELECT  a_s.country,a_s.city,
 CAST(AVG(p.orderedquantity) AS NUMERIC(10,2))average_products_ordered
 FROM all_sessions_clean a_s
@@ -42,7 +43,8 @@ Answer:image.png
 **Question 3: Is there any pattern in the types (product categories) of products ordered from visitors in each city and country?**
 
 
-SQL Queries:```
+SQL Queries:
+```
  SELECT  a_s.country,a_s.city,a_s.v2productcategory, p.name, SUM(p.orderedquantity) products_ordered
 FROM all_sessions_clean a_s
 JOIN products_clean p ON p.sku = a_s.productsku
@@ -63,7 +65,8 @@ Answer:image.png
 **Question 4: What is the top-selling product from each city/country? Can we find any pattern worthy of noting in the products sold?**
 
 
-SQL Queries:```
+SQL Queries:
+```
 SELECT a.country, a.city, c.name,SUM(b.units_sold)Top_Products_By_Units
 FROM all_sessions_clean a
 JOIN analytics_dup b USING(fullvisitorid)
@@ -84,7 +87,8 @@ Answer:image.png
 
 **Question 5: Can we summarize the impact of revenue generated from each city/country?**
 
-SQL Queries: ```
+SQL Queries: 
+```
 SELECT a.city,a.timeonsite,b.channelgrouping,c.sentimentscore,SUM(a.totaltransactionrevenue) Total_Revenue
 from
 all_sessions_clean a
