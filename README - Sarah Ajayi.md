@@ -30,6 +30,6 @@ ROW_NUMBER() PARTION BY was also used to get the duplicate records in the analyt
 
 
 ## Future Goals
-Further cleaning
-Normalizing the tables
-Developing unique identifiers to form 1:1 or One:Many relational models
+- Further cleaning
+- Normalizing the tables
+- Developing unique identifiers to form 1:1 or One:Many relational models
