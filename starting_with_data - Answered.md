@@ -37,7 +37,7 @@ WHERE rn >1
 
 
 
-Answer: There are no duplicatesin the all sessions table and there are over 2.5m duplicate records in the Analytics table.
+**Answer**: There are no duplicatesin the all sessions table and there are over 2.5m duplicate records in the Analytics table.
 
 
 
@@ -49,7 +49,7 @@ SELECT distinct(fullvisitorid)
 FROM all_sessions_clean
 ```
 
-Answer: There are 14,223 unique visitors based on fullvisitorid in the all_sessions table
+**Answer**: There are 14,223 unique visitors based on fullvisitorid in the all_sessions table
 
 
 
@@ -63,7 +63,7 @@ FULL OUTER JOIN analytics_dup b USING(fullvisitorid)
 GROUP BY 1
 ```
 
-Answer: Although, there are over 14,000 unique visitors in the all_sessions table, there are no matching values for over 10,000 visitors ids in the analytics table
+**Answer**: Although, there are over 14,000 unique visitors in the all_sessions table, there are no matching values for over 10,000 visitors ids in the analytics table
 image.png
 
 
