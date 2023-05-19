@@ -1,4 +1,4 @@
-What are your risk areas? Identify and describe them.
+**What are your risk areas? Identify and describe them.**
 
 Though i found some duplicate and irrelevant attibutes, i did not want to alter the table structure, i created new tables as all_sessions_clean, analytics_clean and products_clean and did some data cleaning by changing null values in numerical fields to 0 and categorical fields to N/A.    
 
@@ -15,23 +15,25 @@ Regarding building relationships, the all_sessions and analytics table do not ha
 There is a total of 293,537 units sold in the analytics table out of which 230,436 is without revenue. It would be nice to know if they are promo products and create a separate table the displays the attributes (promo_units) for a smooth relationship modelling and better analysis.
 
 
-QA Process:
-Describe your QA process and include the SQL queries used to execute it.
+**QA Process:
+Describe your QA process and include the SQL queries used to execute it.**
 
-1. Count Validation - Reurns the number of productskuin the sales report table that is not in the all_sessions_clean_table
+1. **Count Validation** - Reurns the number of productskuin the sales report table that is not in the all_sessions_clean_table
 ```
 SELECT DISTINCT COUNT (productsku) 
 FROM sales_report
 WHERE productsku NOT IN (SELECT productsku FROM all_sessions_clean)
 ```
-2. Sum Validation 
-```SELECT SUM(units_sold) from analytics_dup```
-3. Average Validation
-4. Min and Max Validation - Revealed a negative value in the units_sold which was changed to 0
+2. **Sum Validation** 
+```SELECT SUM(units_sold) from analytics_dup```  
+
+3. **Average Validation**  
+4. 
+5. **Min and Max Validation** - Revealed a negative value in the units_sold which was changed to 0
 ```
 SELECT MIN(units_sold) from analytics
 ```
-5. Existence Validation - Returns the matching records of product sku in the sales report and all_sessions_clean tables
+5. **Existence Validation** - Returns the matching records of product sku in the sales report and all_sessions_clean tables
 ```
 SELECT *
 FROM sales_report a 
