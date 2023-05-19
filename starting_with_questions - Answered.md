@@ -34,8 +34,7 @@ LIMIT 10
 
 
 
-Answer:image.png
-
+Answer:![Alt Text](q2.jpg)
 
 
 
@@ -56,7 +55,7 @@ LIMIT 10
 
 
 
-Answer:image.png
+Answer:![Alt Text](q3.jpg)
 
 
 
@@ -79,7 +78,7 @@ LIMIT 10
 
 
 
-Answer:image.png
+Answer:![Alt Text](q4.jpg)
 
 
 
@@ -99,10 +98,21 @@ GROUP BY 1,2,3,4
 ORDER BY 5 DESC
 LIMIT 10
 ```
+```SELECT a.country,a.timeonsite,b.channelgrouping,c.sentimentscore,SUM(a.totaltransactionrevenue) Total_Revenue
+from
+all_sessions_clean a
+JOIN analytics_dup b USING (fullvisitorid)
+JOIN products_clean c ON c.sku = a.productsku
+where totaltransactionrevenue >0
+GROUP BY 1,2,3,4
+ORDER BY 5 DESC
+LIMIT 10
+```
 
 
-
-Answer: image.png
+Answer: The United States - Sunnyvale City have been the most revenue generation country with a high sentimentscore and Referral contributing majorly to the sales.
+![Alt Text](q5.jpg)
+![Alt Text](q6.jpg)
 
 
 
