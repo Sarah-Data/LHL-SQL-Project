@@ -26,7 +26,7 @@ ROW_NUMBER() PARTION BY was also used to get the duplicate records in the analyt
 
 ## Challenges 
 - The tables were not normalized and relationship was hard to recognize
-- There are lots of Null values in the numerical fields that were turned to 0 but which which makes descriptive analysis weird especially when using average function
+- There were lots of Null values in the numerical fields that were turned to 0 but this makes descriptive analysis weird especially when using average function
 
 
 ## Future Goals
