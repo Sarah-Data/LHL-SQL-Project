@@ -1,6 +1,7 @@
 Question 1: Find all duplicate records in the All_sessions and Analytics table
 
-SQL Queries: ```
+SQL Queries: 
+```
 WITH cte
 AS
 (
@@ -42,7 +43,8 @@ Answer: There are no duplicatesin the all sessions table and there are over 2.5m
 
 Question 2: find the total number of unique visitors (`fullVisitorID`)
 
-SQL Queries: ```
+SQL Queries:
+```
 SELECT distinct(fullvisitorid)
 FROM all_sessions_clean
 ```
@@ -53,7 +55,8 @@ Answer: There are 14,223 unique visitors based on fullvisitorid in the all_sessi
 
 Question 3: find the total number of unique visitors by channelgrouping
 
-SQL Queries:```
+SQL Queries:
+```
 SELECT b.channelgrouping, COUNT(distinct a.fullvisitorid)Unique_Visitors
 FROM all_sessions_clean a
 FULL OUTER JOIN analytics_dup b USING(fullvisitorid)
