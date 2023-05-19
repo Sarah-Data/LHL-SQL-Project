@@ -68,16 +68,3 @@ image.png
 
 
 
-Question 4: 
-
-SQL Queries:
-
-Answer:
-
-
-
-Question 5: 
-
-SQL Queries:
-
-Answer:
