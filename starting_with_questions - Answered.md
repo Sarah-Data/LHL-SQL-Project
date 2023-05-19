@@ -13,7 +13,7 @@ ORDER BY 3 DESC
 LIMIT 10
 ```
 
-Answer:image.png
+Answer:![Alt Text](relative/path/to/q1.jpg)
 
 
 
