@@ -112,6 +112,7 @@ LIMIT 10
 
 Answer: The United States - Sunnyvale City have been the most revenue generation country with a high sentimentscore and Referral contributing majorly to the sales.
 ![Alt Text](q5.jpg)
+
 ![Alt Text](q6.jpg)
 
 
