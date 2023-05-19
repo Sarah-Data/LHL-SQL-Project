@@ -34,4 +34,4 @@ ROW_NUMBER() PARTION BY was also used to get the duplicate records in the analyt
 - Normalizing the tables
 - Developing unique identifiers to form 1:1 or One:Many relational models  
 
-![Alt Text](schema.jpg)
+![Alt Text](schema.png)
