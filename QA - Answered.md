@@ -28,8 +28,8 @@ WHERE productsku NOT IN (SELECT productsku FROM all_sessions_clean)
 ```SELECT SUM(units_sold) from analytics_dup```  
 
 3. **Average Validation**  
-4. 
-5. **Min and Max Validation** - Revealed a negative value in the units_sold which was changed to 0
+
+4. **Min and Max Validation** - Revealed a negative value in the units_sold which was changed to 0
 ```
 SELECT MIN(units_sold) from analytics
 ```
