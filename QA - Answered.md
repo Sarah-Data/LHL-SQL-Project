@@ -22,11 +22,11 @@ SELECT DISTINCT COUNT (productsku)
 FROM sales_report
 WHERE productsku NOT IN (SELECT productsku FROM all_sessions_clean)
 ```
-2. Sum Validation - 
-```SELECT SUM(units_sold) from analytics_dup
+2. Sum Validation 
+```SELECT SUM(units_sold) from analytics_dup```
 3. Average Validation
 4. Min and Max Validation - Revealed a negative value in the units_sold which was changed to 0
-'''
+```
 SELECT MIN(units_sold) from analytics
 ```
 5. Existence Validation - Returns the matching records of product sku in the sales report and all_sessions_clean tables
