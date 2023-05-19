@@ -1,6 +1,6 @@
 **What are your risk areas? Identify and describe them.**
 
-Though i found some duplicate and irrelevant attibutes, i did not want to alter the table structure, i created new tables as all_sessions_clean, analytics_clean and products_clean and did some data cleaning by changing null values in numerical fields to 0 and categorical fields to N/A.    
+I found some duplicate and irrelevant attibutes, however, i did not want to alter the table structure of the original table, so i created new tables as all_sessions_clean, analytics_clean and products_clean and did some data cleaning by changing null values in numerical fields to 0 and categorical fields to N/A.    
 
 Negative values in units_sold was zerorized and astronomical values of the unit_price regularized by dividing the column by 1,000,000 as hinted.
 For consistency, rows with empty currency as imputed with 'USD' which ireckon is the standard reporting currency.   
